@@ -1,0 +1,12 @@
+﻿@using Stimulsoft.Report.Blazor
+@using Stimulsoft.Report;
+<h3>Page1</h3>
+<StiBlazorViewer ID="r1" Report="@report" />
+@code {
+    private StiReport report;
+    protected override void OnInitialized()
+    {
+        report = StiReport.CreateNewReport();
+        report.Load("Reports/TwoSimpleLists.mrt");
+    }
+}
